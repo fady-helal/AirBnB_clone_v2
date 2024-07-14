@@ -3,7 +3,10 @@
 from datetime import datetime
 from fabric import Connection
 from fabric.api import *
+
+
 def do_pack():
+  """this define the funciton"""
   time = datetime.now()
   archive = 'web_static_' + time.strftime("%Y%m%d%H%M%S") + '.' + 'tgz'
   local('mkdir -p versions')
